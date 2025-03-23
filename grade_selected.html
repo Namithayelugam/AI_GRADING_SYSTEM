@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subject Selection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {{
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }}
+        .navbar {{
+            width: 100%;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 0;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 15px 15px;
+        }}
+        .navbar a {{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }}
+        .navbar a:hover {{
+            color: #FFD700;
+        }}
+
+        .container {{
+            max-width: 500px;
+        }}
+        .card {{
+            background:linear-gradient(135deg,#ffffff,#ffffff);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }}
+        .btn {{
+            width: 100%;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            color: #fff;
+            padding: 15px;
+        }}
+        .btn-math {{
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }}
+        .btn-science {{
+            background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+        }}
+        .btn-history {{
+            background: linear-gradient(45deg, #ffb347, #ffcc33);
+        }}
+        .btn:hover {{
+            transform: scale(1.05);
+            opacity: 0.9;
+        }}
+        .subject-buttons {{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }}
+        .text-primary {{
+            color: #fff;
+        }}
+    </style>
+</head>
+<body>
+      <div class="navbar">
+        <a href="/">🏠 Home</a>
+        <a href="/about">ℹ️ About Us</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2 class="text-primary">Select a Subject</h2>
+            <p>You have selected <b>{board}</b> curriculum for <b>Grade {grade}</b>. Choose a subject:</p>
+            <div class="subject-buttons">
+                <button onclick="location.href='/subject_selected/Mathematics'" class="btn btn-math">🧮 Mathematics</button>
+                <button onclick="location.href='/subject_selected/Science'" class="btn btn-science">🔬 Science</button>
+                <button onclick="location.href='/subject_selected/History'" class="btn btn-history">📜 History</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
